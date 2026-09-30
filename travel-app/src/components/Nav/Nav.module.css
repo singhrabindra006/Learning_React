@@ -1,0 +1,222 @@
+.Nav_Wrapper {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+
+  background: #fff;
+}
+
+/* Logo */
+
+.logo a {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e1e1e;
+}
+
+.logo span {
+  color: #00a6c7;
+}
+
+/* Navigation */
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav_links li a {
+  color: #1e1e1e;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.nav_links li a:hover {
+  color: #00a6c7;
+}
+
+/* Right Section */
+
+.nav_btns {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Search */
+
+.search_wrapper {
+  width: 180px;
+  height: 36px;
+
+  position: relative;
+}
+
+.search_wrapper input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+  border-radius: 20px;
+
+  background: #f4f7f8;
+
+  padding: 0 15px 0 38px;
+}
+
+.search_wrapper i {
+  position: absolute;
+  left: 14px;
+  top: 9px;
+
+  font-size: 17px;
+  color: #555;
+
+  z-index: 1;
+}
+
+/* Call Button */
+
+.CallBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.CallBtn > i {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8f8fb;
+  color: #00a6c7;
+
+  font-size: 18px;
+}
+
+.CallBtn div {
+  display: flex;
+  flex-direction: column;
+}
+
+.CallBtn a {
+  color: #1e1e1e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.CallBtn small {
+  color: #777;
+  font-size: 10px;
+}
+
+/* Mobile Button */
+
+.menu_toggle {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  font-size: 25px;
+  cursor: pointer;
+  color: #1e1e1e;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1000px) {
+
+  .nav_links {
+    gap: 15px;
+  }
+
+  .search_wrapper {
+    width: 140px;
+  }
+
+  .CallBtn {
+    display: none;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+  .Nav_Wrapper {
+    height: 70px;
+    padding: 0 6%;
+  }
+
+  .nav_links {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 0;
+
+    background: #fff;
+
+    display: none;
+    flex-direction: column;
+
+    gap: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    z-index: 100;
+  }
+
+  .nav_links.active {
+    display: flex;
+  }
+
+  .search_wrapper {
+    width: 140px;
+  }
+
+  .menu_toggle {
+    display: block;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+
+  .logo a {
+    font-size: 24px;
+  }
+
+  .search_wrapper {
+    width: 120px;
+  }
+
+  .search_wrapper input {
+    font-size: 12px;
+  }
+}
